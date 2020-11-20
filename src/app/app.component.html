@@ -2,26 +2,39 @@
   <!-- Links -->
   <ul class="navbar-nav">
     <li class="nav-item">
-        <a routerLink="employees" class="nav-link" routerLinkActive="active">Employee List</a>
+      <a routerLink="employees" class="nav-link" routerLinkActive="active">Employee List</a>
     </li>
     <li class="nav-item">
-        <a routerLink="add" class="nav-link" routerLinkActive="active">Add Employee</a>
+      <a routerLink="add" class="nav-link" routerLinkActive="active">Add Employee</a>
     </li>
+    <li class="nav-item">
+      <a routerLink="registration" class="nav-link" routerLinkActive="active">Registration</a>
+    </li>
+    <li class="nav-item">
+      <a routerLink="login" class="nav-link" routerLinkActive="active">Login</a>
+    </li>
+    <li>
+      <a class="btn navbar-btn btn-danger navbar-right" role="button">Logout</a>
+    </li>
+
+
   </ul>
 </nav>
 <div class="container">
   <br>
   <h2 style="text-align: center;">{{title}}</h2>
-  <hr>  
+  <hr>
   <div class="card">
     <div class="card-body">
-  <router-outlet></router-outlet>
+      <router-outlet></router-outlet>
     </div>
   </div>
 </div>
 
 <footer class="footer">
   <div class="container">
-      <span>All Rights Reserved 2019 @JavaGuides</span>
+    <span>All Rights Reserved 2019 @Sergej Kalva</span><br>
+    <span>email: tulitas1@gmail.com</span><br>
+    <span>t. +37129158366</span>
   </div>
 </footer>
