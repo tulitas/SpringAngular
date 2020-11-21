@@ -10,7 +10,6 @@ import { UpdateEmployeeComponent } from './update-employee/update-employee.compo
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { RegistrationComponent } from './registration/registration.component';
-import { LoginComponent } from './login/login.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -19,7 +18,6 @@ import { LoginComponent } from './login/login.component';
     EmployeeListComponent,
     UpdateEmployeeComponent,
     RegistrationComponent,
-    LoginComponent
   ],
   imports: [
     BrowserModule,
