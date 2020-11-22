@@ -1,6 +1,7 @@
 import { Employee } from '../employee';
 import { Component, OnInit, Input } from '@angular/core';
 import { EmployeeService } from '../employee.service';
+import { EmployeeListComponent } from '../employee-list/employee-list.component';
 import { Router, ActivatedRoute } from '@angular/router';
 
 @Component({
@@ -20,7 +21,7 @@ export class EmployeeDetailsComponent implements OnInit {
     this.employee = new Employee();
 
     this.id = this.route.snapshot.params['id'];
-
+    
     this.employeeService.getEmployee(this.id)
       .subscribe(data => {
         console.log(data)

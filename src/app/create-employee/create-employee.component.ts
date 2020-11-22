@@ -14,8 +14,9 @@ export class CreateEmployeeComponent implements OnInit {
   submitted = false;
 
   constructor(private employeeService: EmployeeService,
-    private router: Router) { }
+              private router: Router) { }
 
+  // tslint:disable-next-line:typedef
   ngOnInit() {
   }
 
@@ -24,21 +25,24 @@ export class CreateEmployeeComponent implements OnInit {
     this.employee = new Employee();
   }
 
+  // tslint:disable-next-line:typedef
   save() {
     this.employeeService
     .createEmployee(this.employee).subscribe(data => {
-      console.log(data)
+      console.log(data);
       this.employee = new Employee();
       this.gotoList();
-    }, 
+    },
     error => console.log(error));
   }
 
+  // tslint:disable-next-line:typedef
   onSubmit() {
     this.submitted = true;
-    this.save();    
+    this.save();
   }
 
+  // tslint:disable-next-line:typedef
   gotoList() {
     this.router.navigate(['/employees']);
   }

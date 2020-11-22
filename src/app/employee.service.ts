@@ -7,7 +7,7 @@ import { Observable } from 'rxjs';
 })
 export class EmployeeService {
 
-  private baseUrl = 'http://localhost:8080/springboot-crud-rest/api/v1/employees';
+  private baseUrl = 'http://localhost:8080/springboot/api/v1/employees';
 
   constructor(private http: HttpClient) { }
 
@@ -15,10 +15,12 @@ export class EmployeeService {
     return this.http.get(`${this.baseUrl}/${id}`);
   }
 
+  // tslint:disable-next-line:ban-types
   createEmployee(employee: Object): Observable<Object> {
     return this.http.post(`${this.baseUrl}`, employee);
   }
 
+  // tslint:disable-next-line:ban-types
   updateEmployee(id: number, value: any): Observable<Object> {
     return this.http.put(`${this.baseUrl}/${id}`, value);
   }
