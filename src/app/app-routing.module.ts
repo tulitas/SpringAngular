@@ -6,6 +6,7 @@ import { EmployeeListComponent } from './employee-list/employee-list.component';
 import { UpdateEmployeeComponent } from './update-employee/update-employee.component';
 import {RegistrationComponent} from './registration/registration.component';
 import {UserListComponent} from './user-list/user-list.component';
+import {UserDetailsComponent} from './user-details/user-details.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'employee', pathMatch: 'full' },
@@ -13,6 +14,7 @@ const routes: Routes = [
   { path: 'add', component: CreateEmployeeComponent },
   { path: 'update/:id', component: UpdateEmployeeComponent },
   { path: 'details/:id', component: EmployeeDetailsComponent },
+  { path: 'userDetails/:id', component: UserDetailsComponent },
   { path: 'registration', component: RegistrationComponent },
   { path: 'users', component: UserListComponent },
 ];

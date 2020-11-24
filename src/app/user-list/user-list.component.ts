@@ -1,9 +1,8 @@
 import {Component, OnInit} from '@angular/core';
-import {Observable} from "rxjs";
+import {Observable} from 'rxjs';
 import {User} from "../user";
 import {UserService} from "../user.service";
 import {Router} from "@angular/router";
-
 
 @Component({
   selector: 'app-user-list',
@@ -26,4 +25,22 @@ export class UserListComponent implements OnInit {
     this.users = this.userService.getUserList();
   }
 
+  // tslint:disable-next-line:typedef
+  deleteUser(id: number) {
+    this.userService.deleteUser(id)
+      .subscribe(data => {
+        console.log(data);
+        this.reloadData();
+      },
+        error => console.log(error));
+  }
+
+  // tslint:disable-next-line:typedef
+  userDetails(id: number) {
+    this.router.navigate(['userDetails', id]);
+  }
+
+  updateUser(id: number) {
+    this.router.navigate(['update', id]);
+  }
 }
