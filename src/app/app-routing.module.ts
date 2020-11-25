@@ -7,6 +7,7 @@ import { UpdateEmployeeComponent } from './update-employee/update-employee.compo
 import {RegistrationComponent} from './registration/registration.component';
 import {UserListComponent} from './user-list/user-list.component';
 import {UserDetailsComponent} from './user-details/user-details.component';
+import {LoginComponent} from './login/login.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'employee', pathMatch: 'full' },
@@ -17,6 +18,7 @@ const routes: Routes = [
   { path: 'userDetails/:id', component: UserDetailsComponent },
   { path: 'registration', component: RegistrationComponent },
   { path: 'users', component: UserListComponent },
+  { path: 'login', component: LoginComponent },
 ];
 
 @NgModule({
