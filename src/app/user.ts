@@ -5,4 +5,5 @@ export class User {
   email: string;
   birthDate: string;
   role: string;
+  createDate: string;
 }
