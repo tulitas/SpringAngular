@@ -2,6 +2,9 @@ import { EmployeeService } from '../employee.service';
 import { Employee } from '../employee';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import {EmployeePosition} from '../employee-position';
+import {EmployeePositionService} from '../employee-position.service';
+import {Observable} from 'rxjs';
 
 @Component({
   selector: 'app-create-employee',
@@ -9,18 +12,26 @@ import { Router } from '@angular/router';
   styleUrls: ['./create-employee.component.css']
 })
 export class CreateEmployeeComponent implements OnInit {
-
   employee: Employee = new Employee();
   submitted = false;
+  employeePosition: Observable<EmployeePosition[]>;
 
   constructor(private employeeService: EmployeeService,
-              private router: Router) { }
+              private employeePositionService: EmployeePositionService,
+              private router: Router, ) { }
 
   // tslint:disable-next-line:typedef
   ngOnInit() {
+    this.reloadData();
   }
 
-  newEmployee(): void {
+  // tslint:disable-next-line:typedef
+  reloadData() {
+    this.employeePosition = this.employeePositionService.getPositionList();
+  }
+
+ // @ts-ignore
+  ployee(): void {
     this.submitted = false;
     this.employee = new Employee();
   }
@@ -46,4 +57,5 @@ export class CreateEmployeeComponent implements OnInit {
   gotoList() {
     this.router.navigate(['/employees']);
   }
+
 }

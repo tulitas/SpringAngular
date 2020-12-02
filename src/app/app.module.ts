@@ -13,6 +13,9 @@ import { RegistrationComponent } from './registration/registration.component';
 import { LoginComponent } from './login/login.component';
 import { UserListComponent } from './user-list/user-list.component';
 import { UserDetailsComponent } from './user-details/user-details.component';
+import { ReactiveFormsModule } from '@angular/forms';
+import { PositionListComponent } from './position-list/position-list.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -23,13 +26,16 @@ import { UserDetailsComponent } from './user-details/user-details.component';
     RegistrationComponent,
     LoginComponent,
     UserListComponent,
-    UserDetailsComponent
+    UserDetailsComponent,
+    PositionListComponent,
+
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -15,10 +15,20 @@
       <label for="emailId">Email Id</label>
       <input type="text" class="form-control" id="emailId" required [(ngModel)]="employee.emailId" name="emailId">
     </div>
+    <div>
+      <label for="positions">Employee Positions</label>
+        <select class="form-control">
+          <option id="positions">Select employee position</option>
+          <option  *ngFor="let employeePosition of employeePosition | async">{{employeePosition.position}}</option>
+        </select>
 
+    </div>
     <button type="submit" class="btn btn-success">Submit</button>
   </form>
+
+
 </div>
+
 
 <div [hidden]="!submitted">
   <h4>You submitted successfully!</h4>

@@ -28,5 +28,6 @@ export class EmployeeDetailsComponent implements OnInit {
 
   list(){
     this.router.navigate(['employees']);
+    this.router.navigate(['positions']);
   }
 }
