@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import {Observable} from "rxjs";
-import {EmployeePosition} from "../employee-position";
-import {EmployeePositionService} from "../employee-position.service";
-import {Router} from "@angular/router";
+import {Observable} from 'rxjs';
+import {EmployeePosition} from '../employee-position';
+import {EmployeePositionService} from '../employee-position.service';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-position-list',
@@ -16,10 +16,12 @@ export class PositionListComponent implements OnInit {
 
   ngOnInit(): void {
   }
+  // tslint:disable-next-line:typedef
   reloadData() {
     this.employeePosition = this.employeePositionService.getPositionList();
   }
 
+  // tslint:disable-next-line:typedef
   deletePosition(id: number){
     this.employeePositionService.deletePosition(id)
       .subscribe(

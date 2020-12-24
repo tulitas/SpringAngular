@@ -21,7 +21,6 @@
           <option id="positions">Select employee position</option>
           <option  *ngFor="let employeePosition of employeePosition | async">{{employeePosition.position}}</option>
         </select>
-
     </div>
     <button type="submit" class="btn btn-success">Submit</button>
   </form>

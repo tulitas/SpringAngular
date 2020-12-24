@@ -15,6 +15,7 @@ import { UserListComponent } from './user-list/user-list.component';
 import { UserDetailsComponent } from './user-details/user-details.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { PositionListComponent } from './position-list/position-list.component';
+import { JoinEmployeePositionListComponent } from './join-employee-position-list/join-employee-position-list.component';
 
 @NgModule({
   declarations: [
@@ -28,6 +29,7 @@ import { PositionListComponent } from './position-list/position-list.component';
     UserListComponent,
     UserDetailsComponent,
     PositionListComponent,
+    JoinEmployeePositionListComponent,
 
   ],
   imports: [

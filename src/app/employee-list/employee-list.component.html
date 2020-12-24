@@ -19,13 +19,10 @@
           <td>{{employee.firstName}}</td>
           <td>{{employee.lastName}}</td>
           <td>{{employee.emailId}}</td>
-
-
           <td><button (click)="deleteEmployee(employee.id)" class="btn btn-danger">Delete</button>
               <button (click)="updateEmployee(employee.id)" class="btn btn-success" style="margin-left: 10px">Update</button>
               <button (click)="employeeDetails(employee.id)" class="btn btn-info" style="margin-left: 10px">Details</button>
           </td>
-
         </tr>
 <!--        <select>-->
 <!--          <option  class="panel-body" *ngFor="let position of employeePosition | async">-->
@@ -34,6 +31,5 @@
 <!--        </select>-->
       </tbody>
     </table>
-
   </div>
 </div>

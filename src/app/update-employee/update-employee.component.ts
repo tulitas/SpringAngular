@@ -20,7 +20,7 @@ export class UpdateEmployeeComponent implements OnInit {
     this.employee = new Employee();
 
     this.id = this.route.snapshot.params['id'];
-    
+
     this.employeeService.getEmployee(this.id)
       .subscribe(data => {
         console.log(data)
@@ -38,7 +38,7 @@ export class UpdateEmployeeComponent implements OnInit {
   }
 
   onSubmit() {
-    this.updateEmployee();    
+    this.updateEmployee();
   }
 
   gotoList() {
