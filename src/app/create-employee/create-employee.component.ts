@@ -14,7 +14,7 @@ import {Observable} from 'rxjs';
 export class CreateEmployeeComponent implements OnInit {
   employee: Employee = new Employee();
   submitted = false;
-  employeePosition: Observable<EmployeePosition[]>;
+  positionId: Observable<EmployeePosition[]>;
 
   constructor(private employeeService: EmployeeService,
               private employeePositionService: EmployeePositionService,
@@ -27,7 +27,7 @@ export class CreateEmployeeComponent implements OnInit {
 
   // tslint:disable-next-line:typedef
   reloadData() {
-    this.employeePosition = this.employeePositionService.getPositionList();
+    this.positionId = this.employeePositionService.getPositionList();
   }
 
  // @ts-ignore

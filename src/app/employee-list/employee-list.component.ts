@@ -13,7 +13,7 @@ import {EmployeePositionService} from '../employee-position.service';
 })
 export class EmployeeListComponent implements OnInit {
   employees: Observable<Employee[]>;
-  employeePosition: Observable<EmployeePosition[]>;
+  positionId: Observable<EmployeePosition[]>;
 
   constructor(private employeeService: EmployeeService,
               private employeePositionService: EmployeePositionService,
@@ -27,7 +27,7 @@ export class EmployeeListComponent implements OnInit {
   // tslint:disable-next-line:typedef
   reloadData() {
     this.employees = this.employeeService.getEmployeesList();
-    this.employeePosition = this.employeePositionService.getPositionList();
+    this.positionId = this.employeePositionService.getPositionList();
   }
 
   // tslint:disable-next-line:typedef

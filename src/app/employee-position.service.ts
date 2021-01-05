@@ -6,7 +6,7 @@ import {Observable} from 'rxjs';
   providedIn: 'root'
 })
 export class EmployeePositionService {
-  private baseUrl = 'http://localhost:8080/springboot/api/positions/positions'
+  private baseUrl = 'http://localhost:8080/springboot/api/positions/positions';
 
   constructor(private  http: HttpClient) {
   }
